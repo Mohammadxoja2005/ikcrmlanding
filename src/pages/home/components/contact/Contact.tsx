@@ -77,7 +77,7 @@ const Contact: FC = () => {
                             <h3 className={styles.contact_phone_name}>Звоните</h3>
                             <div className={styles.contact_number_container}>
                                 <img src={PHONE} alt="" />
-                                +998 94 664 66 61
+                                +998 97 777 34 19
                             </div>
                             <p className={styles.contact_schedule}>
                                 Пн-Пт с 10:00-19:00 Сб-Вс: Выходной

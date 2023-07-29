@@ -17,7 +17,7 @@ const Header: FC = () => {
 
                 <div className={styles.header_contact}>
                     <p className={styles.header_contact_phone}>
-                        Звоните <span className={styles.header_contact_highlight}>+998 94 664 66 61</span>
+                        Звоните <span className={styles.header_contact_highlight}>+998 97 777 34 19</span>
                     </p>
 
                     <div className={styles.header_social_container}>

@@ -23,10 +23,48 @@
   text-decoration: line-through;
 }
 
-.client_list_container {
-  display: flex;
-  align-items: center;
-}
+// .client_list_container {
+//   display: flex;
+//   align-items: center;
+
+//   .client_prev,
+//   .client_next {
+//     padding: 15px;
+//     border-radius: 50%;
+//     background: linear-gradient(top, bottom, #2f3a56, #2f3a56);
+//     box-shadow: 0px 0px 10px 2px #2f3a56;
+//     cursor: pointer;
+//   }
+// } 
+
+// @-moz-document url-prefix() {
+  .client_list_container {
+    position: relative;
+
+    .client_prev,
+    .client_next {
+      padding: 15px;
+      border-radius: 50%;
+      background-color: #2f3a56;
+      box-shadow: 0px 0px 10px 2px #2f3a56;
+      cursor: pointer;
+      position: absolute;
+      z-index: 99999;
+    }
+
+    .client_prev {
+      top: 20%;
+      left: 0;
+    }
+
+    .client_next {
+      right: 0;
+      top: 20%;
+    }
+  }
+// }
+// @supports (-moz-appearance: none) {
+// }
 
 .client_list {
   display: flex;
@@ -50,15 +88,6 @@
 .client_name {
   font-size: 24px;
   text-align: center;
-}
-
-.client_prev,
-.client_next {
-  padding: 15px;
-  border-radius: 50%;
-  background: linear-gradient(top, bottom, #2f3a56, #2f3a56);
-  box-shadow: 0px 0px 10px 2px #2f3a56;
-  cursor: pointer;
 }
 
 .client_arrow_img {

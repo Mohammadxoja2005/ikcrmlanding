@@ -15,12 +15,13 @@
 }
 
 .review_list_container {
-  display: flex;
+  // display: flex;
+  min-width: 0;
   gap: 20px;
 }
 
 .review_arrow_container {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   border-radius: 10px;

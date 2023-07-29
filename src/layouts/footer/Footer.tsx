@@ -41,7 +41,7 @@ const Footer: FC = () => {
                         <div className={styles.footer_info_contact}>
                             <div className={styles.footer_info_number}>
                                 <img src={PHONE} alt="" />
-                                +998 94 664 66 61
+                                +998 97 777 34 19
                             </div>
                             <p className={styles.footer_info_schedule}>Пн-Пт с 10:00-19:00 Сб-Вс: Выходной</p>
 
@@ -58,7 +58,7 @@ const Footer: FC = () => {
                             <a target='_blank' href='https://t.me/ITKEYUZB' className={styles.footer_tg_container}>
                                 <img src={TELEGRAM} alt="" />
                             </a>
-                            <a target='_blank' href='https://instagram.com/itkeyuz?igshid=YmMyMTA2M2Y=' className={styles.footer_tg_container}>
+                            <a target='_blank' href='https://www.instagram.com/itkeysofttech/' className={styles.footer_tg_container}>
                                 <img src={INSTAGRAM} alt="" />
                             </a>
                             <a target='_blank' href='https://www.facebook.com/ITKEYUZ?mibextid=LQQJ4d' className={styles.footer_tg_container}>

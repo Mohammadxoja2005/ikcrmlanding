@@ -25,8 +25,8 @@ const Client: FC = () => {
                     <div className={styles.client_prev}>
                         <img className={styles.client_arrow_img} src={PREV} alt="client prev" />
                     </div>
-
                     <Swiper
+                        // style={{ maxWidth: "1250px" }}
                         spaceBetween={20}
                         navigation={{
                             prevEl: `.${styles.client_prev}`,
