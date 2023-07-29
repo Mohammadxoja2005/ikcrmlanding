@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: conic-gradient(
+    from 180deg at 50% 0%,
+    #242636 -91deg,
+    #212f47 91deg,
+    #242636 268deg,
+    #212f47 451deg
+  );
+}
+
+@font-face {
+  font-family: mont-regular;
+  src: url("./assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: mont-semibold;
+  src: url("./assets/fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: mont-bold;
+  src: url("./assets/fonts/Montserrat-Bold.ttf");
+}
