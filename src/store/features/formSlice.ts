@@ -2,9 +2,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const submitForm = createAsyncThunk('/create', async (
-    data: { phone?: string, name?: string, deal_name?: string, responsible_id?: number }) => {
+    data: {
+        token: string, source: string,
+        fio?: string, phone?: string, deal_name?: string, responsible_id?: number
+    }) => {
 
-    return axios.post('https://backend-itkey.ikcrm.uz/create', data)
+    return axios.post('https://itkey.ikcrm.uz/api/send-data', data)
 })
 
 const initialState: {

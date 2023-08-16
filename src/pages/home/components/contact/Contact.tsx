@@ -9,25 +9,29 @@ import TELEGRAM from "../../../../assets/icons/telegram.png"
 // redux
 import { submitForm } from '../../../../store/features/formSlice';
 import { useDispatch } from "react-redux";
-import { Dispatch } from '@reduxjs/toolkit';
 // jotai
 import { useOpenSuccess } from '../../../../hooks/useOpenSuccess';
 import { useAtom } from "jotai";
+import { useNavigate } from 'react-router-dom';
 
 const Contact: FC = () => {
-    const dispatch: Dispatch<any> = useDispatch();
+    const dispatch: any = useDispatch();
     const [phone, setPhone] = useState<string>('');
     const [, setIsModal] = useAtom(useOpenSuccess);
+    const navigate = useNavigate();
 
     const onSubmit = () => {
         dispatch(submitForm(
             {
-                name: "there is no name",
+                token: "base64:YXJkX2FwaV90b2tlbl9oYXNo",
+                source: "ikcrm.uz",
+                fio: "Only number",
                 phone: phone,
-                deal_name: "IKCRM",
-                responsible_id: 9636770
             }
-        ))
+        )).then(() => {
+            navigate('/notification');
+        })
+
         setIsModal(true);
     }
 

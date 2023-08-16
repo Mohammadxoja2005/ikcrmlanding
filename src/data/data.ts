@@ -1,10 +1,9 @@
-import PRODUCT1 from "../assets/images/product1.png";
-
-import PRODUCT2 from "../assets/images/product2.png";
-import PRODUCT3 from "../assets/images/product3.png";
-import PRODUCT4 from "../assets/images/product4.png";
-import PRODUCT5 from "../assets/images/product5.png";
-import PRODUCT6 from "../assets/images/product6.png";
+import PRODUCT1 from "../assets/images/product1.svg";
+import PRODUCT2 from "../assets/images/product2.svg";
+import PRODUCT3 from "../assets/images/product3.svg";
+import PRODUCT4 from "../assets/images/product4.svg";
+import PRODUCT5 from "../assets/images/product5.svg";
+import PRODUCT6 from "../assets/images/product6.svg";
 
 import BENEFIT1 from "../assets/icons/benefit1.png";
 import BENEFIT2 from "../assets/icons/benefit2.png";

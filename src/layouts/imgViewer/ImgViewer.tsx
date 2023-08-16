@@ -36,7 +36,7 @@ const ImgViewer: FC<props> = (props) => {
                         <div className={styles.modal_close_container} onClick={closeModal}>
                             <img style={{ cursor: "pointer" }} src={CLOSE} alt="modal close" />
                         </div>
-                        <img src={imgUrl} alt="" style={{ width: "100%", objectFit: "cover" }} />
+                        <img src={imgUrl} alt="" style={{ width: "100%", objectFit: "contain" }} />     
                     </Dialog.Panel>
                 </Dialog>
             </Transition>

@@ -13,16 +13,17 @@ import { useOpenSuccess } from '../../hooks/useOpenSuccess';
 // react-redux
 import { useDispatch } from "react-redux";
 import { submitForm } from '../../store/features/formSlice';
-import { Dispatch } from '@reduxjs/toolkit';
+import { useNavigate } from 'react-router-dom';
 
 const FormModal: FC = () => {
-    const dispatch: Dispatch<any> = useDispatch();
+    const dispatch: any = useDispatch();
 
     const [isOpenModal, setIsOpenModal] = useAtom(isOpenForm);
     const [, setIsSuccesModal] = useAtom(useOpenSuccess);
 
     const [name, setName] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
+    const navigate = useNavigate();
 
     function closeModal() {
         setIsOpenModal(false)
@@ -31,11 +32,13 @@ const FormModal: FC = () => {
     const onSubmit = () => {
         dispatch(submitForm(
             {
+                token: "base64:YXJkX2FwaV90b2tlbl9oYXNo",
+                source: "ikcrm.uz",
                 phone: phone,
-                name: name,
-                deal_name: "IKCRM",
-                responsible_id: 9636770
-            }))
+                fio: name,
+            })).then(() => {
+                navigate('/notification');
+            })
 
         setIsSuccesModal(true);
     }
