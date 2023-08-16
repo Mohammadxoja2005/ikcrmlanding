@@ -42,7 +42,7 @@ const ImgViewer: FC<props> = (props) => {
             </Transition>
             <img
                 src={srcUrl}
-                style={{ width: "100%", cursor: "pointer" }}
+                style={{ width: "100%", cursor: "pointer", borderRadius: "10px"}}
                 alt=""
                 onClick={() => openModal(srcUrl)}
             />
