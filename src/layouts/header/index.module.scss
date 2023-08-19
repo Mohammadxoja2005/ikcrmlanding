@@ -47,6 +47,11 @@
   box-shadow: 0px 0px 10px 2px #2f3a56;
 }
 
+.header_lang {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 @media screen and (max-width: 1200px) {
   .header_logo_container {
     flex-direction: column;

@@ -10,23 +10,28 @@ import SuccessModal from '../../../../layouts/successModal/SuccessModal';
 // jotai
 import { isOpenForm } from '../../../../hooks/useOpenForm';
 import { useAtom } from "jotai";
+// i18n
+import { LOCALES, I18nProvider } from '../../../../i18n';
+import TRANSLATE from '../../../../i18n/translate';
+import { useLanguage } from '../../../../hooks/useLanguage';
 
 const Hero: FC = () => {
     const [, setIsOpenModal] = useAtom(isOpenForm);
+    const [language] = useAtom(useLanguage);
 
     return (
-        <>
+        <I18nProvider locale={language ? language : LOCALES.RUSSIAN}>
             <section className={styles.hero}>
                 <div className={styles.hero_container}>
                     <div className={styles.hero_content}>
 
                         <div className={styles.hero_content_text}>
-                            <h1 className={styles.hero_title}>Сделаем Ваш бизнес <span className={styles.hero_higlight}>эффективнее</span> и <span className={styles.hero_higlight}>прибыльнее</span></h1>
-                            <p className={styles.hero_des}><span className={styles.hero_higlight}>Оптимизировав</span> бизнес-процессы, <span className={styles.hero_higlight}>повысим</span> лояльность и число покупателей</p>
+                            <h1 className={styles.hero_title}><TRANSLATE text='make_your_business' /><span className={styles.hero_higlight}> <TRANSLATE text='business_process' /><TRANSLATE text='effective' /></span> <TRANSLATE text='and' /> <span className={styles.hero_higlight}><TRANSLATE text='profit' /></span></h1>
+                            <p className={styles.hero_des}><span className={styles.hero_higlight}><TRANSLATE text='optimize' /></span> <TRANSLATE text='business_process' />, <span className={styles.hero_higlight}><TRANSLATE text='raise' /></span> <TRANSLATE text='loyal' /></p>
                         </div>
 
                         <div className={styles.hero_btn} onClick={() => setIsOpenModal(true)}>
-                            Оставить заявку
+                            <TRANSLATE text='application' />
                             <img src={NEXTARROW} alt="next icon ikcrm" />
                         </div>
 
@@ -38,7 +43,7 @@ const Hero: FC = () => {
             </section>
             <FormModal />
             <SuccessModal />
-        </>
+        </I18nProvider>
     )
 }
 

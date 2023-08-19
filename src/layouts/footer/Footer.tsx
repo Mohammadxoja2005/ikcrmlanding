@@ -8,42 +8,49 @@ import INSTAGRAM from "../../assets/icons/instagram.png";
 import FACEBOOK from "../../assets/icons/facebook.png";
 import PHONE from "../../assets/icons/phone.png";
 
+import { LOCALES, I18nProvider } from '../../i18n';
+import TRANSLATE from '../../i18n/translate';
+import { useLanguage } from '../../hooks/useLanguage';
+import { useAtom } from 'jotai';
+
 const Footer: FC = () => {
+    const [language,] = useAtom(useLanguage)
+
     return (
-        <>
+        <I18nProvider locale={language ? language : LOCALES.RUSSIAN}>
             <footer className={styles.footer}>
                 <div className={styles.footer_container}>
                     <div className={styles.footer_info}>
                         <img className={styles.footer_info_logo} src={LOGO} alt="" />
-                        <p className={styles.footer_info_name}>Бесконечное множество, бизнес решений!</p>
+                        <p className={styles.footer_info_name}><TRANSLATE text='slogan' /></p>
                     </div>
                     <div className={styles.footer_info} >
-                        <p className={styles.footer_info_title}>Меню</p>
+                        <p className={styles.footer_info_title}><TRANSLATE text='menu' /></p>
 
                         <div className={styles.footer_info_links}>
-                            <a href="#" className={styles.footer_info_name}>Главная</a>
-                            <a href="#" className={styles.footer_info_name}>О компании</a>
-                            <a href="#" className={styles.footer_info_name}>Кейсы</a>
-                            <a href="#" className={styles.footer_info_name}>Контакты</a>
+                            <a href="#" className={styles.footer_info_name}><TRANSLATE text='main' /></a>
+                            <a href="#" className={styles.footer_info_name}><TRANSLATE text='about_company' /></a>
+                            <a href="#" className={styles.footer_info_name}><TRANSLATE text='cases' /></a>
+                            <a href="#" className={styles.footer_info_name}><TRANSLATE text='contacts' /></a>
                         </div>
 
                     </div>
                     <div className={styles.footer_info} >
-                        <p className={styles.footer_info_title}>Услуги</p>
+                        <p className={styles.footer_info_title}><TRANSLATE text='services' /></p>
 
                         <div className={styles.footer_info_links}>
                             <a href="#" className={styles.footer_info_name}>IT Key</a>
                         </div>
                     </div>
                     <div className={styles.footer_info}>
-                        <p className={styles.footer_info_title}>Контакты</p>
+                        <p className={styles.footer_info_title}><TRANSLATE text='contacts' /></p>
 
                         <div className={styles.footer_info_contact}>
                             <div className={styles.footer_info_number}>
                                 <img src={PHONE} alt="" />
                                 +998 97 777 34 19
                             </div>
-                            <p className={styles.footer_info_schedule}>Пн-Пт с 10:00-19:00 Сб-Вс: Выходной</p>
+                            <p className={styles.footer_info_schedule}><TRANSLATE text='Dn-Ju' /> с 10:00-19:00 <TRANSLATE text='Shn-Yn' />: <TRANSLATE text='contact_free' /></p>
 
                             <a target='_blank' href='https://t.me/ITKEYUZB' className={styles.footer_tg_container}>
                                 <img src={TELEGRAM} alt="" />
@@ -52,7 +59,7 @@ const Footer: FC = () => {
                         </div>
                     </div>
                     <div className={styles.footer_info}>
-                        <p className={styles.footer_info_title}>Мы в социальных сетях</p>
+                        <p className={styles.footer_info_title}><TRANSLATE text='we_in_social' /></p>
 
                         <div className={styles.footer_info_social}>
                             <a target='_blank' href='https://t.me/ITKEYUZB' className={styles.footer_tg_container}>
@@ -72,12 +79,12 @@ const Footer: FC = () => {
 
             <section className={styles.footer_politic}>
                 <div className={styles.footer_politic_container}>
-                    <p className={styles.footer_politic_text}>Все права защищены
+                    <p className={styles.footer_politic_text}><TRANSLATE text='confidential' />
                         OOO «ITKey»</p>
-                    <a className={styles.footer_politic_link} href="">Политика конфиденциальности</a>
+                    <a className={styles.footer_politic_link} href=""><TRANSLATE text='politics' /></a>
                 </div>
             </section>
-        </>
+        </I18nProvider>
     )
 }
 
