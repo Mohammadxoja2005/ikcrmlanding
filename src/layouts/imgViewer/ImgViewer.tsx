@@ -7,11 +7,12 @@ import { Dialog, Transition } from '@headlessui/react';
 import CLOSE from "../../assets/icons/close.png";
 
 interface props {
-    srcUrl: string
+    srcUrl: string,
+    presentImg: string
 }
 
 const ImgViewer: FC<props> = (props) => {
-    const { srcUrl } = props;
+    const { srcUrl, presentImg } = props;
 
     const [imgUrl, setImgUrl] = useState<string>('');
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -33,16 +34,16 @@ const ImgViewer: FC<props> = (props) => {
                     onClose={closeModal}
                 >
                     <Dialog.Panel className={styles.modal_container}>
-                        <div className={styles.modal_close_container} onClick={closeModal}>
+                        {/* <div className={styles.modal_close_container} onClick={closeModal}>
                             <img style={{ cursor: "pointer" }} src={CLOSE} alt="modal close" />
-                        </div>
-                        <img src={imgUrl} alt="" style={{ width: "100%", objectFit: "contain" }} />     
+                        </div> */}
+                        <img src={imgUrl} alt="" style={{ width: "100%", objectFit: "contain", borderRadius: "4px" }} />
                     </Dialog.Panel>
                 </Dialog>
             </Transition>
             <img
-                src={srcUrl}
-                style={{ width: "100%", cursor: "pointer", borderRadius: "10px"}}
+                src={presentImg}
+                style={{ width: "100%", cursor: "pointer", borderRadius: "10px", objectFit: "cover" }}
                 alt=""
                 onClick={() => openModal(srcUrl)}
             />

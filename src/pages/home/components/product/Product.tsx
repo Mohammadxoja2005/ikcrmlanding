@@ -13,49 +13,62 @@ import PRODUCT4 from "../../../../assets/images/product4.svg";
 import PRODUCT5 from "../../../../assets/images/product5.svg";
 import PRODUCT6 from "../../../../assets/images/product6.svg";
 
+import PRESENTPRODUCT1 from "../../../../assets/images/product1.png";
+import PRESENTPRODUCT2 from "../../../../assets/images/product2.png";
+import PRESENTPRODUCT3 from "../../../../assets/images/product3.png";
+import PRESENTPRODUCT4 from "../../../../assets/images/product4.png";
+import PRESENTPRODUCT5 from "../../../../assets/images/product5.png";
+import PRESENTPRODUCT6 from "../../../../assets/images/product6.png";
+
 import { useLanguage } from '../../../../hooks/useLanguage';
 import { useAtom } from 'jotai';
 
 const Product: FC = () => {
-    
+
     const [language,] = useAtom(useLanguage);
 
-    const products: Array<{ id: number, img: string, name: any, description: any }> = [
+    const products: Array<{ id: number, img: string, name: any, description: any, presentableImg: string }> = [
         {
             id: 1,
             img: PRODUCT1,
             name: <TRANSLATE text='product1_name' />,
             description: <TRANSLATE text='product1_des' />,
+            presentableImg: PRESENTPRODUCT1
         },
         {
             id: 2,
             img: PRODUCT2,
             name: <TRANSLATE text='product2_name' />,
-            description: <TRANSLATE text='product2_des' />
+            description: <TRANSLATE text='product2_des' />,
+            presentableImg: PRESENTPRODUCT2
         },
         {
             id: 3,
             img: PRODUCT3,
             name: <TRANSLATE text='product3_name' />,
-            description: <TRANSLATE text='product3_des' />
+            description: <TRANSLATE text='product3_des' />,
+            presentableImg: PRESENTPRODUCT3
         },
         {
             id: 4,
             img: PRODUCT4,
             name: <TRANSLATE text='product4_name' />,
             description: <TRANSLATE text='product4_des' />,
+            presentableImg: PRESENTPRODUCT4
         },
         {
             id: 5,
             img: PRODUCT5,
             name: <TRANSLATE text='product5_name' />,
             description: <TRANSLATE text='product5_des' />,
+            presentableImg: PRESENTPRODUCT5
         },
         {
             id: 6,
             img: PRODUCT6,
             name: <TRANSLATE text='product6_name' />,
             description: <TRANSLATE text='product6_des' />,
+            presentableImg: PRESENTPRODUCT6
         }
     ]
 
@@ -76,6 +89,7 @@ const Product: FC = () => {
                                     <div className={styles.product_img_container}>
                                         <ImgViewer
                                             srcUrl={product.img}
+                                            presentImg={product.presentableImg}
                                         />
                                     </div>
                                     <p className={styles.product_list_name}>{product.name}</p>
