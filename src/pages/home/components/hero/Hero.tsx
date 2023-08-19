@@ -27,7 +27,7 @@ const Hero: FC = () => {
 
                         <div className={styles.hero_content_text}>
                             <h1 className={styles.hero_title}><TRANSLATE text='make_your_business' /><span className={styles.hero_higlight}> <TRANSLATE text='business_process' /><TRANSLATE text='effective' /></span> <TRANSLATE text='and' /> <span className={styles.hero_higlight}><TRANSLATE text='profit' /></span></h1>
-                            <p className={styles.hero_des}><span className={styles.hero_higlight}><TRANSLATE text='optimize' /></span> <TRANSLATE text='business_process' />, <span className={styles.hero_higlight}><TRANSLATE text='raise' /></span> <TRANSLATE text='loyal' /></p>
+                            <p className={styles.hero_des}><span className={styles.hero_higlight}><TRANSLATE text='optimize' /></span> <TRANSLATE text='business_process' /> <span className={styles.hero_higlight}><TRANSLATE text='raise' /></span> <TRANSLATE text='loyal' /></p>
                         </div>
 
                         <div className={styles.hero_btn} onClick={() => setIsOpenModal(true)}>
