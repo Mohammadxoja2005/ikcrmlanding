@@ -1,0 +1,28 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+  font-family: mont-regular;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.personal_des {
+  margin-bottom: 50px;
+}
+
+.personal_name {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.personal_dess {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

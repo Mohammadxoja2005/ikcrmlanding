@@ -4,7 +4,7 @@ import styles from "./index.module.scss";
 // headless ui
 import { Dialog, Transition } from '@headlessui/react';
 // icons
-import CLOSE from "../../assets/icons/close.png";
+// import CLOSE from "../../assets/icons/close.png";
 
 interface props {
     srcUrl: string,

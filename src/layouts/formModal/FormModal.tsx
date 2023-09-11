@@ -13,7 +13,7 @@ import { useOpenSuccess } from '../../hooks/useOpenSuccess';
 // react-redux
 import { useDispatch } from "react-redux";
 import { submitForm } from '../../store/features/formSlice';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const FormModal: FC = () => {
     const dispatch: any = useDispatch();
@@ -60,15 +60,14 @@ const FormModal: FC = () => {
                             <input className={styles.contact_input} onChange={(e) => setName(e.target.value)} placeholder='Ф.И.О.' type="text" />
                             <input className={styles.contact_input} onChange={(e) => setPhone(e.target.value)} placeholder='Номер телефона' type="text" />
                             <div className={styles.contact_agg_container}>
-                                <input className={styles.contact_agg_checkbox} type="checkbox" />
-                                <p className={styles.contact_agg_text}>Вы соглашаетесь с условиями обработки персональных данных</p>
+                                {/* <input className={styles.contact_agg_checkbox} type="checkbox" /> */}
+                                <p className={styles.contact_agg_text}>При отправке данных вы соглашаетесь с условиями обработки <Link to={'/personal'} style={{color: "#94B3EC"}}>персональных данных</Link></p>
                             </div>
                             <div className={styles.contact_form_btn} onClick={onSubmit}>
                                 Оставить заявку
                                 <img src={NEXTARROW} alt="" />
                             </div>
                         </div>
-
                     </div>
 
                 </Dialog.Panel>
