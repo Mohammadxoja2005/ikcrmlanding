@@ -12,6 +12,7 @@ import { LOCALES, I18nProvider } from '../../i18n';
 import TRANSLATE from '../../i18n/translate';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useAtom } from 'jotai';
+import { Link } from 'react-router-dom';
 
 const Footer: FC = () => {
     const [language,] = useAtom(useLanguage)
@@ -81,7 +82,7 @@ const Footer: FC = () => {
                 <div className={styles.footer_politic_container}>
                     <p className={styles.footer_politic_text}><TRANSLATE text='confidential' />
                         OOO «ITKey»</p>
-                    <a className={styles.footer_politic_link} href=""><TRANSLATE text='politics' /></a>
+                    <Link className={styles.footer_politic_link} to="/personal"><TRANSLATE text='politics' /></Link>
                 </div>
             </section>
         </I18nProvider>

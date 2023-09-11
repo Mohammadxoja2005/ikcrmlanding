@@ -84,6 +84,8 @@ export default {
         'services': "Xizmatlar",
         'we_in_social': "Biz ijtimoiy tarmoqlarda",
         "confidential": "Barcha huquqlar himoyalangan ",
-        'politics': "Maxfiylik siyosati"
+        'politics': "Maxfiylik siyosati",
+        'personal': "Ma'lumotlarni yuborishda siz qayta ishlash shartlariga rozilik bildirasiz", 
+        'personaldata': "(shartlar)"
     }
 }
