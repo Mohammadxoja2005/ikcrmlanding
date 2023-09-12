@@ -42,6 +42,11 @@ const Footer: FC = () => {
                         <div className={styles.footer_info_links}>
                             <a href="#" className={styles.footer_info_name}>IT Key</a>
                         </div>
+                        <div className={styles.footer_info_links}>
+                            <Link style={{ color: "#00A3FF" }} to="/terms">
+                                <TRANSLATE text='personal_use'></TRANSLATE>
+                            </Link>
+                        </div>
                     </div>
                     <div className={styles.footer_info}>
                         <p className={styles.footer_info_title}><TRANSLATE text='contacts' /></p>
@@ -82,7 +87,7 @@ const Footer: FC = () => {
                 <div className={styles.footer_politic_container}>
                     <p className={styles.footer_politic_text}><TRANSLATE text='confidential' />
                         OOO «ITKey»</p>
-                    <Link className={styles.footer_politic_link} to="/personal"><TRANSLATE text='politics' /></Link>
+                    <Link className={styles.footer_politic_link} to="/politics"><TRANSLATE text='politics' /></Link>
                 </div>
             </section>
         </I18nProvider>

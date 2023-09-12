@@ -62,7 +62,7 @@ const FormModal: FC = () => {
                             <input className={styles.contact_input} onChange={(e) => setPhone(e.target.value)} placeholder='Номер телефона' type="text" />
                             <div className={styles.contact_agg_container}>
                                 {/* <input className={styles.contact_agg_checkbox} type="checkbox" /> */}
-                                <p className={styles.contact_agg_text}><TRANSLATE text='personal'/> <Link to={'/offer'} style={{color: "#94B3EC"}}><TRANSLATE text='personaldata'/></Link></p>
+                                <p className={styles.contact_agg_text}><TRANSLATE text='personal'/> <Link to={'/terms'} style={{color: "#94B3EC"}}><TRANSLATE text='personaldata'/></Link></p>
                             </div>
                             <div className={styles.contact_form_btn} onClick={onSubmit}>
                                 Оставить заявку

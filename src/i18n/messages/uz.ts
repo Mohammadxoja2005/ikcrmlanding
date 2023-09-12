@@ -86,6 +86,7 @@ export default {
         "confidential": "Barcha huquqlar himoyalangan ",
         'politics': "Maxfiylik siyosati",
         'personal': "Ma'lumotlarni yuborishda siz qayta ishlash shartlariga rozilik bildirasiz", 
-        'personaldata': "(shartlar)"
+        'personaldata': "(shartlar)", 
+        'personal_use': "Foydalanuvchi shartnomasi"
     }
 }

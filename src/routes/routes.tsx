@@ -15,11 +15,11 @@ export const routes = createBrowserRouter([
         element: <NOTIFICATION />
     },
     {
-        path: "/personal",
+        path: "/politics",
         element: <Personal />
     },
     {
-        path: "/offer",
+        path: "/terms",
         element: <Offer />
     }
 ])
